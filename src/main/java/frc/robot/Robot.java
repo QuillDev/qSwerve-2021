@@ -20,13 +20,12 @@ public class Robot extends TimedRobot {
 
   private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-  //get the robot container
-  private RobotContainer m_robotContainer;
+  private RobotContainer robotContainer;
 
   @Override
-  public void robotInit(){
-    m_robotContainer = new RobotContainer();
-    RobotContainer.DRIVE.zeroGyro();
+  public void robotInit() {
+    this.robotContainer = new RobotContainer();
+    //RobotContainer.DRIVE.zeroGyro();
     logger.debug("Finished Initializing Robot!");
   }
 

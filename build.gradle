@@ -5,6 +5,7 @@ plugins {
 
 repositories {
     jcenter()
+    mavenCentral()
 }
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
@@ -55,6 +56,10 @@ dependencies {
     nativeZip wpi.deps.vendor.jni(wpi.platforms.roborio)
     nativeDesktopZip wpi.deps.vendor.jni(wpi.platforms.desktop)
 
+    //compile slf4j for logging
+    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.29'
+
+    //add juint for testing
     testImplementation 'junit:junit:4.12'
 
     // Enable simulation gui support. Must check the box in vscode to enable support

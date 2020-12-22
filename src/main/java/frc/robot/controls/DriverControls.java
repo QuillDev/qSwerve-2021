@@ -1,16 +1,16 @@
-package frc.team2767.swervetesting.control;
+package frc.robot.controls;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+import frc.robot.commands.ZeroGyroCommand;
 import frc.robot.controls.ControllerUtils.Axis;
 import frc.robot.controls.ControllerUtils.Button;
-import frc.team2767.swervetesting.command.ZeroGyroCommand;
 
 public class DriverControls {
 
   private Joystick joystick;
 
-  DriverControls(int portNumber) {
+  public DriverControls(int portNumber) {
     joystick = new Joystick(portNumber);
 
     // Drive Commands
